@@ -6,7 +6,7 @@ pipeline {
   }
 
   environment {
-    DOCKERHUB_REGISTRY = 'joanroucoux/node-web-app'
+    DOCKERHUB_REGISTRY = 'sindhiya1930/demo-jenkins'
     DOCKERHUB_CREDENTIALS_ID = 'dockerhub'
   }
 
