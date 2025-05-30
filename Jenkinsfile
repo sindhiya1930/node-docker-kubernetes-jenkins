@@ -22,7 +22,7 @@ pipeline {
     stage('Build Docker image') {
       steps {
         script {
-          sh 'docker build -t ${DOCKERHUB_REGISTRY}:${BUILD_NUMBER} .'
+          sh 'docker build -t ${DOCKERHUB_REGISTRY}:latest .'
         }
       }
     }
@@ -35,7 +35,7 @@ pipeline {
           usernameVariable: 'DOCKERHUB_USERNAME'
         )]) {
           sh 'docker login -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}'
-          sh 'docker push ${DOCKERHUB_REGISTRY}:${BUILD_NUMBER}'
+          sh 'docker push ${DOCKERHUB_REGISTRY}:latest'
         }
       }
     }
