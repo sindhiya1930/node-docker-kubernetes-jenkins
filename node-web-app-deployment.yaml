@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: node-web-app
-          image: joanroucoux/node-web-app
+          image: sindhiya1930/demo-jenkins:latest
           ports:
             - containerPort: 8080
