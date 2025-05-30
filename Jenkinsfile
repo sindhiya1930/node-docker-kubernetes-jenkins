@@ -43,7 +43,7 @@ pipeline {
     stage('Deploy to kubernates') {
       steps {
         sh '''
-        aws eks update-kubeconfig skillfyme1
+        aws eks update-kubeconfig --name skillfyme1
         kubectl apply -f node-web-app-deployment.yaml
         kubectl apply -f node-web-app-service.yaml
         '''
